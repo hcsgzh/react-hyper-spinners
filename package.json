@@ -4,17 +4,33 @@
   "description": "CSS-only spinners for React",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "npx eslint .\\**\\*.js",
+    "lint:fix": "npx prettier-eslint .\\src\\**\\*.js --write"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hcsgzh/react-hyper-spinners.git"
   },
-  "keywords": ["react", "css", "spinner"],
+  "keywords": [
+    "react",
+    "css",
+    "spinner"
+  ],
   "author": "Hugh",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/hcsgzh/react-hyper-spinners/issues"
   },
-  "homepage": "https://github.com/hcsgzh/react-hyper-spinners#readme"
+  "homepage": "https://github.com/hcsgzh/react-hyper-spinners#readme",
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-standard": "^13.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-standard": "^4.0.0",
+    "prettier-eslint": "^9.0.0",
+    "prettier-eslint-cli": "^5.0.0"
+  }
 }
