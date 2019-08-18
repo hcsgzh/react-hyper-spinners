@@ -1,68 +1,75 @@
 {
-  "name": "react-hyper-spinners",
-  "version": "1.0.0",
-  "description": "CSS-only spinners for React",
-  "main": "dist/bundle.cjs.js",
-  "module": "dist/bundle.esm.js",
-  "sideEffects": false,
-  "scripts": {
-    "prebuild": "rimraf dist",
-    "build": "rollup -c",
-    "lint": "npx eslint .\\**\\*.js",
-    "lint:fix": "npx prettier-eslint .\\src\\**\\*.js --write"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
+    "name": "react-hyper-spinners",
+    "version": "1.0.0",
+    "description": "CSS-only spinners for React",
+    "main": "dist/bundle.cjs.js",
+    "module": "dist/bundle.esm.js",
+    "sideEffects": false,
+    "scripts": {
+        "prebuild": "rimraf dist",
+        "build": "rollup -c",
+        "lint": "npx eslint .\\**\\*.js",
+        "lint:fix": "npx prettier-eslint .\\src\\**\\*.js --write",
+        "storybook": "start-storybook -p 9001 -c storybook",
+        "storybook:build": "build-storybook -c storybook"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.js": [
+            "npm run lint:fix",
+            "git add"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/hcsgzh/react-hyper-spinners.git"
+    },
+    "keywords": [
+        "react",
+        "css",
+        "spinner"
+    ],
+    "author": "Hugh",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/hcsgzh/react-hyper-spinners/issues"
+    },
+    "homepage": "https://github.com/hcsgzh/react-hyper-spinners#readme",
+    "devDependencies": {
+        "@babel/core": "^7.5.5",
+        "@babel/preset-env": "^7.5.5",
+        "@babel/preset-react": "^7.0.0",
+        "@storybook/addon-options": "^5.1.11",
+        "@storybook/react": "^5.1.11",
+        "babel-loader": "^8.0.6",
+        "eslint": "^6.1.0",
+        "eslint-config-standard": "^13.0.1",
+        "eslint-plugin-import": "^2.18.2",
+        "eslint-plugin-node": "^9.1.0",
+        "eslint-plugin-promise": "^4.2.1",
+        "eslint-plugin-react": "^7.14.3",
+        "eslint-plugin-standard": "^4.0.0",
+        "husky": "^3.0.3",
+        "lint-staged": "^9.2.1",
+        "prettier-eslint": "^9.0.0",
+        "prettier-eslint-cli": "^5.0.0",
+        "react": "^16.9.0",
+        "react-dom": "^16.9.0",
+        "rimraf": "^3.0.0",
+        "rollup": "^1.19.4",
+        "rollup-plugin-babel": "^4.3.3",
+        "rollup-plugin-node-resolve": "^5.2.0",
+        "rollup-plugin-string": "^3.0.0",
+        "rollup-plugin-terser": "^5.1.1"
+    },
+    "peerDependencies": {
+        "react": ">=16.4"
+    },
+    "engines": {
+        "node": ">=8"
     }
-  },
-  "lint-staged": {
-    "*.js": [
-      "npm run lint:fix",
-      "git add"
-    ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hcsgzh/react-hyper-spinners.git"
-  },
-  "keywords": [
-    "react",
-    "css",
-    "spinner"
-  ],
-  "author": "Hugh",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/hcsgzh/react-hyper-spinners/issues"
-  },
-  "homepage": "https://github.com/hcsgzh/react-hyper-spinners#readme",
-  "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "@babel/preset-react": "^7.0.0",
-    "eslint": "^6.1.0",
-    "eslint-config-standard": "^13.0.1",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-node": "^9.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.14.3",
-    "eslint-plugin-standard": "^4.0.0",
-    "husky": "^3.0.3",
-    "lint-staged": "^9.2.1",
-    "prettier-eslint": "^9.0.0",
-    "prettier-eslint-cli": "^5.0.0",
-    "rimraf": "^3.0.0",
-    "rollup": "^1.19.4",
-    "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-string": "^3.0.0",
-    "rollup-plugin-terser": "^5.1.1"
-  },
-  "peerDependencies": {
-    "react": ">=16.4"
-  },
-  "engines": {
-    "node": ">=8"
-  }
 }

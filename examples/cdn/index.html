@@ -12,10 +12,17 @@
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
     <script src="./node_modules/react-hyper-spinners/dist/bundle.umd.js"></script>
     <script>
-        const { Grid } = window.ReactHyperSpinners
+        const { Grid, Blocks, Hourglass } = window.ReactHyperSpinners
         const container = document.getElementById('container')
-        ReactDOM.render(
+        const Container = React.createElement(
+            React.Fragment,
+            null,
             React.createElement(Grid),
+            React.createElement(Blocks),
+            React.createElement(Hourglass)
+        )
+        ReactDOM.render(
+            Container,
             container
         )
     </script>

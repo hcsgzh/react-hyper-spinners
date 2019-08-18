@@ -1,8 +1,14 @@
 import React from 'react'
-import { Blocks } from 'react-hyper-spinners'
+import { Grid, Blocks, Hourglass } from 'react-hyper-spinners'
 
 function App () {
-  return <Blocks />
+  return (
+    <>
+      <Grid />
+      <Blocks />
+      <Hourglass />
+    </>
+  )
 }
 
 export default App
