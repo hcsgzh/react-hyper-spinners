@@ -12,9 +12,10 @@
         "lint:fix": "npx prettier-eslint .\\src\\**\\*.js --write",
         "storybook": "start-storybook -p 9001 -c storybook",
         "storybook:build": "build-storybook -c storybook",
-        "test" : "jest",
+        "test": "jest",
         "test:watch": "jest --watch",
         "test:coverage": "jest --coverage",
+        "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
         "test:staged": "jest --findRelatedTests"
     },
     "husky": {
@@ -52,6 +53,7 @@
         "@storybook/react": "^5.1.11",
         "babel-jest": "^24.9.0",
         "babel-loader": "^8.0.6",
+        "coveralls": "^3.0.6",
         "eslint": "^6.1.0",
         "eslint-config-standard": "^13.0.1",
         "eslint-plugin-import": "^2.18.2",
@@ -82,8 +84,8 @@
         "node": ">=8"
     },
     "jest": {
-      "moduleNameMapper": {
-        "\\.css$": "<rootDir>/mocks/styles.js"
-      }
+        "moduleNameMapper": {
+            "\\.css$": "<rootDir>/mocks/styles.js"
+        }
     }
 }
