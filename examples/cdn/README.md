@@ -4,5 +4,5 @@ Minimal demo of the spinners with create-react-app using UMD bundle.
 
 ```sh
 # Serve on localhost
-npm run serve
+npx serve
 ```
