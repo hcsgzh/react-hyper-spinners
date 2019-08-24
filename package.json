@@ -16,7 +16,9 @@
         "test:watch": "jest --watch",
         "test:coverage": "jest --coverage",
         "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
-        "test:staged": "jest --findRelatedTests"
+        "test:staged": "jest --findRelatedTests",
+        "predeploy": "npm run storybook:build",
+        "deploy": "gh-pages -d storybook-static"
     },
     "husky": {
         "hooks": {
@@ -44,7 +46,7 @@
     "bugs": {
         "url": "https://github.com/hcsgzh/react-hyper-spinners/issues"
     },
-    "homepage": "https://github.com/hcsgzh/react-hyper-spinners#readme",
+    "homepage": "https://hcsgzh.github.io/react-hyper-spinners",
     "devDependencies": {
         "@babel/core": "^7.5.5",
         "@babel/preset-env": "^7.5.5",
@@ -62,6 +64,7 @@
         "eslint-plugin-promise": "^4.2.1",
         "eslint-plugin-react": "^7.14.3",
         "eslint-plugin-standard": "^4.0.0",
+        "gh-pages": "^2.1.1",
         "husky": "^3.0.3",
         "jest": "^24.9.0",
         "lint-staged": "^9.2.1",
