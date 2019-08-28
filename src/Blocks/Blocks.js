@@ -3,7 +3,13 @@ import styles from './styles.css'
 
 const Blocks = props => (
   <React.Fragment>
-    <div className="lds-facebook">
+    {/* <style>{styles}</style> */}
+    <div className="lds-blocks">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
       <div></div>
       <div></div>
       <div></div>

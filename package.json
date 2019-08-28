@@ -1,10 +1,13 @@
 {
     "name": "react-hyper-spinners",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "CSS-only spinners for React",
     "main": "dist/bundle.cjs.js",
     "module": "dist/bundle.esm.js",
     "sideEffects": false,
+    "files": [
+        "dist"
+    ],
     "scripts": {
         "prebuild": "rimraf dist",
         "build": "rollup -c",
@@ -18,7 +21,8 @@
         "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
         "test:staged": "jest --findRelatedTests",
         "predeploy": "npm run storybook:build",
-        "deploy": "gh-pages -d storybook-static"
+        "deploy": "gh-pages -d storybook-static",
+        "prepublishOnly2": "npm run build"
     },
     "husky": {
         "hooks": {
@@ -68,6 +72,7 @@
         "husky": "^3.0.3",
         "jest": "^24.9.0",
         "lint-staged": "^9.2.1",
+        "node-sass": "^4.12.0",
         "prettier-eslint": "^9.0.0",
         "prettier-eslint-cli": "^5.0.0",
         "react": "^16.9.0",
@@ -77,8 +82,10 @@
         "rollup": "^1.19.4",
         "rollup-plugin-babel": "^4.3.3",
         "rollup-plugin-node-resolve": "^5.2.0",
+        "rollup-plugin-sass": "^1.2.2",
         "rollup-plugin-string": "^3.0.0",
-        "rollup-plugin-terser": "^5.1.1"
+        "rollup-plugin-terser": "^5.1.1",
+        "sass-loader": "^7.3.1"
     },
     "peerDependencies": {
         "react": ">=16.4"
@@ -88,7 +95,7 @@
     },
     "jest": {
         "moduleNameMapper": {
-            "\\.css$": "<rootDir>/mocks/styles.js"
+            "\\.(css|scss)$": "<rootDir>/mocks/styles.js"
         }
     }
 }

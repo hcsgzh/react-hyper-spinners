@@ -2,6 +2,7 @@ import babel from 'rollup-plugin-babel'
 import resolve from 'rollup-plugin-node-resolve'
 import { terser } from 'rollup-plugin-terser'
 import { string } from 'rollup-plugin-string'
+import sass from 'rollup-plugin-sass'
 
 const dist = 'dist'
 const bundle = 'bundle'
@@ -37,6 +38,7 @@ const common = {
     string({
       include: '**/*.css'
     }),
+    sass(),
     production && terser()
   ]
 }

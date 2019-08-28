@@ -1,7 +1,7 @@
 const React = require('react')
 const express = require('express')
 const ReactDOM = require('react-dom/server')
-const { Grid, Blocks, Hourglass } = require('react-hyper-spinners')
+const { Grid, Blocks, Hourglass, Circles } = require('react-hyper-spinners')
 
 const port = 3000
 
@@ -13,7 +13,8 @@ app.get('*', (req, res) => {
     null,
     React.createElement(Grid),
     React.createElement(Blocks),
-    React.createElement(Hourglass)
+    React.createElement(Hourglass),
+    React.createElement(Circles)
   )
 
   const html = ReactDOM.renderToString(el)

@@ -2,8 +2,13 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="lds-facebook"
+  className="lds-blocks"
 >
+  <div />
+  <div />
+  <div />
+  <div />
+  <div />
   <div />
   <div />
   <div />
