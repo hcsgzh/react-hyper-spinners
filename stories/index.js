@@ -1,6 +1,14 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { Grid, Blocks, Hourglass, Gear, Pacman, Circles } from '../src'
+import {
+  Grid,
+  Blocks,
+  Hourglass,
+  Gear,
+  Pacman,
+  Circles,
+  Circledot
+} from '../src'
 
 storiesOf('Spinners', module)
   .add('Grid', () => <Grid />)
@@ -9,3 +17,4 @@ storiesOf('Spinners', module)
   .add('Gear', () => <Gear />)
   .add('Pacman', () => <Pacman />)
   .add('Circles', () => <Circles />)
+  .add('Circledot', () => <Circledot />)

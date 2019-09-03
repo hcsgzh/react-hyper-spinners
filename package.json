@@ -1,6 +1,6 @@
 {
     "name": "react-hyper-spinners",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "CSS-only spinners for React",
     "main": "dist/bundle.cjs.js",
     "module": "dist/bundle.esm.js",

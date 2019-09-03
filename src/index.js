@@ -11,3 +11,5 @@ export * from './Gear'
 export * from './Pacman'
 
 export * from './Circles'
+
+export * from './Circledot'
